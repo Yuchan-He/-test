@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>send the form to 12_receive_data.php</title>
+</head>
+<body>
+	<h2>表单传值的两种方式  GET和POST (表单中需要要有name)</h2>
+	<form method="POST" action="12_receive_data.php">
+	<input type="text" name="username" value="username"></input>
+	<!-- 表单传值的两种方式  GET和POST (表单中需要要有name) ，没有name,数组没有对应的下标就无法成功提交-->
+	<!-- 	提交时候，是以数组的方式提交，[name]对应数组的下标，input中的内容对应数组的内容。 -->
+	<input type="text" value="sex"></input>
+	<input type="password" name="password" value="password"></input>
+	<input type="submit" name="submit" value="submit"></input>
+	</form>
+
+	<h2>表单传值--复选框</h2>
+	<form method="POST" action="12_receive_checkbox.php">
+	<!-- PHP接收数据的--处理复选框（处理复选框name同样时，提交数据被覆盖的问题→用中括号【】）	 -->
+	<input type="checkbox" name="hobby[]" value="apple">apple</input>
+	<input type="checkbox" name="hobby[]" value="watermelon">watermelon</input>
+	<!-- checkbox中value要赋值，否则提交不了数据，和input text不同，input text提交用户输入的值，checkbox提价value中的值 -->
+	<input type="checkbox" name="hobby[]" value="">strawberry</input>
+
+
+	<p>grjoh</p>
+	  <p>hirnh</p>
+
+	<input type="text">
+
+<h2>geg</h2>
+
+	<h3>单选框 </h3>
+	<input type="radio" name="gender" value="1" checked="checked">man</input>
+	
+	<input type="radio" name="gender" value="2">women</input>
+	<input type="submit" name="submit" value="submit"></input>
+	</form>
+
+
+</body>
+</html>
